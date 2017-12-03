@@ -1,1 +1,1 @@
-Author: Jon Sulcer
+Authors: Jon Sulcer and Adam Chisolm
