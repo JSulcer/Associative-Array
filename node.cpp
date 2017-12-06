@@ -2,7 +2,7 @@
 
 using namespace std;
 
-node::node(string value)
+Node::Node(string value)
 {
   left = NULL;
   right = NULL;
@@ -10,7 +10,7 @@ node::node(string value)
   data = 0;
 }
 
-node::~node()
+Node::~Node()
 {
 
 }

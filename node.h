@@ -8,7 +8,7 @@ class Node
 {
  public:
   Node(std::string value);
-  virtual ~node();
+  virtual ~Node();
 
  private:
   Node *left, *right;

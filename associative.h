@@ -1,22 +1,22 @@
-#inndef ASSOCIATIVE_H
+#ifndef ASSOCIATIVE_H
 #define ASSICIATIVE_H
 
 #include <iostream>
 #include <string>
 #include "node.h"
 
-class associative;
+class associative
 {
  public:
   associative();
-  virtual associative();
+  virtual ~associative();
   void insert(std::string key, int data);
   void find(std::string key);
   void print();
   void min();
   void max();
   void save_file();
-  void delete(std::string key);
+  void delete_index(std::string key);
 
  private:
   Node *root;
