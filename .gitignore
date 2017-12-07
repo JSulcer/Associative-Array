@@ -1,0 +1,4 @@
+# Ignore any binaries, object files, and emacs backups.
+associative
+*.o
+*~
