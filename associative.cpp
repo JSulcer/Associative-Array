@@ -4,7 +4,7 @@ using namespace std;
 
 associative::associative()
 {
-  root = NULL;
+    root = NULL;
 }
 
 associative::~associative()
@@ -12,29 +12,45 @@ associative::~associative()
 
 }
 
-void associative::insert(string key, int data)
+void associative::insert(string value, int num)
 {
-  if(root == NULL)
-    root = new Node(value);
-  else
-    insertHelper(root, value);
+    if(root == NULL)
+        root = new Node(value, num);
+    else
+        insertHelper(root, value, num);
 }
 
-void associative::insertHelper(Node *current, string value)
+void associative::insertHelper(Node *current, string value, int num)
 {
-  if(value < current -> data)
+    if(value < current -> key)
     {
-      if(current -> left == NULL)
-	current -> left = new Node(value);
-      else
-	insertHelper(current -> left, value);
+        if(current -> left == NULL)
+            current -> left = new Node(value, num);
+    else
+        insertHelper(current -> left, value, num);
     }
 
-  else
+    else
     {
-      if(current -> right == NULL)
-	current -> right = new Node(value);
-      else
-	insertHelper(current -> right, value);
+        if(current -> right == NULL)
+            current -> right = new Node(value, num);
+        else
+            insertHelper(current -> right, value, num);
+    }
+}
+
+void associative::print()
+{
+    printHelper(root);
+    cout << endl;
+}
+
+void associative::printHelper(Node *current)
+{
+    if(current != NULL)
+    {
+        printHelper(current -> left);
+        cout << current -> key << " " << current -> data << ", ";
+        printHelper(current -> right);
     }
 }

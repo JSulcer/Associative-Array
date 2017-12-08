@@ -2,12 +2,12 @@
 
 using namespace std;
 
-Node::Node(string value)
+Node::Node(string value, int num)
 {
-  left = NULL;
-  right = NULL;
-  key  = value;
-  data = 0;
+    left = NULL;
+    right = NULL;
+    key  = value;
+    data = num;
 }
 
 Node::~Node()

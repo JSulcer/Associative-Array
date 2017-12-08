@@ -6,14 +6,16 @@
 
 class Node
 {
- public:
-  Node(std::string value);
-  virtual ~Node();
+    friend class associative;
 
- private:
-  Node *left, *right;
-  std::string key;
-  int data;
+    public:
+        Node(std::string value, int num);
+        virtual ~Node();
+
+    private:
+        Node *left, *right;
+        std::string key;
+        int data;
 };
 
 #endif // NODE_H

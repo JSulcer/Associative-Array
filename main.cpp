@@ -7,7 +7,17 @@
 using namespace std;
 
 int main(){
-  cout << "Hello World" << endl;
+    cout << "Hello World" << endl;
 
-  return 0;
+    associative Test;
+
+    Test.insert("Bob", 5);
+    Test.insert("Ted", 2);
+    Test.insert("Nik", 7);
+
+    Test.print();
+
+    cout << "Done" << endl;
+
+    return 0;
 }
