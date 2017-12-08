@@ -22,7 +22,14 @@ void associative::insert(string value, int num)
 
 void associative::insertHelper(Node *current, string value, int num)
 {
-    if(value < current -> key)
+    string testValue = value;
+    string testKey = current -> key;
+    for(unsigned int i = 0; i < value.length(); i++)
+      tolower(testValue[i]);
+    for(unsigned int i = 0; i < testKey.length(); i++)
+      tolower(testKey[i]);
+      
+    if(testValue < testKey)
     {
         if(current -> left == NULL)
             current -> left = new Node(value, num);
