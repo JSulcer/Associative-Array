@@ -87,7 +87,7 @@ class associative
         Node *root;
         void insertHelper(Node *current, std::string value, int num);
         void printHelper(Node *current);
-
+	void deleteHelper(Node *&current, std::string value);
 };
 
 #endif // ASSOCIATIVE_H

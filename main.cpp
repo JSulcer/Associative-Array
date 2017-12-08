@@ -17,6 +17,10 @@ int main(){
 
     Test.print();
 
+    Test.delete_index("Ted");
+
+    Test.print();
+    
     cout << "Done" << endl;
 
     return 0;

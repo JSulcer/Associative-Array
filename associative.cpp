@@ -33,8 +33,8 @@ void associative::insertHelper(Node *current, string value, int num)
     {
         if(current -> left == NULL)
             current -> left = new Node(value, num);
-    else
-        insertHelper(current -> left, value, num);
+	else
+	  insertHelper(current -> left, value, num);
     }
 
     else
@@ -60,4 +60,61 @@ void associative::printHelper(Node *current)
         cout << current -> key << " " << current -> data << ", ";
         printHelper(current -> right);
     }
+}
+
+void associative::delete_index(string value)
+{
+    deleteHelper(root, value);
+}
+
+void associative::deleteHelper(Node *&current, string value)
+{
+  if(current == NULL)
+    return;
+
+  else if(value < current -> key)
+    deleteHelper(current -> left, value);
+
+  else if (current -> key < value)
+    deleteHelper(current -> right, value);
+
+    else
+      {
+	Node *temp;
+
+	if(current -> left == NULL)
+	  {
+	    temp = current -> right;
+	    delete current;
+	    current = temp;
+	  }
+
+	else if(current -> right == NULL)
+	  {
+	    temp = current -> left;
+	    delete current;
+	    current = temp;
+	  }
+
+	else
+	  {
+	    temp = current -> right;
+	    Node *parent = NULL;
+
+	    while(temp -> left != NULL)
+	      {
+		parent = temp;
+		temp = temp -> left;
+	      }
+
+	    current -> key = temp -> key;
+	    current -> data = temp -> data;
+
+	    if(parent != NULL)
+	      deleteHelper(parent -> left, parent -> left -> key);
+	    else
+	      deleteHelper(current -> right, current -> right -> key);
+	  
+	  }
+      }
 }
