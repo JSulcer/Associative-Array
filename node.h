@@ -1,3 +1,8 @@
+// Authors: Jon Sulcer and Adam Chisolm
+// Date: 12/8/17
+// File: node.h
+// Description: The implementation of a Node.
+
 #ifndef NODE_H
 #define NODE_H
 
