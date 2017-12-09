@@ -1,3 +1,8 @@
+// Authors: Jon Sulcer and Adam Chisolm
+// Date: 12/8/17
+// File: associative.h
+// Description: The implementation file for an associative array.
+
 #include "associative.h"
 
 using namespace std;
