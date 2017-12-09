@@ -13,5 +13,9 @@ Description:
   tree stores a key (string) and its corresponding data (int).
   
 How to Use:
+  Run the program, uses very basic testing method. No user input.
 
 Known Bugs/Problems:
+  Not enough time as of now for menu implementation or operator[] overloading,
+  The functions on a basic level work, but as far as testing goes, what is 
+  shown in main is what works properly and tested.
