@@ -193,3 +193,57 @@ void associative::findHelper(Node *current, string value)
         cout << current -> data << endl;
     }
 }
+
+void associative::import(string fileName)
+{
+    string word;
+    ifstream readFile;
+    readFile.open(fileName.c_str());
+    
+    readFile >> word;
+    
+    while (readFile)
+    {
+        importInsert(word);
+        readFile >> word;
+    }
+    
+    readFile.close();
+}
+void associative::importInsert(string value)
+{
+    if(root == NULL)
+        root = new Node(value, 1);
+    else
+        importInsertHelper(root, value);
+}
+
+void associative::importInsertHelper(Node *current, string value)
+{
+    string testValue = value;
+    string testKey = current -> key;
+    for(unsigned int i = 0; i < value.length(); i++)
+      tolower(testValue[i]);
+    for(unsigned int i = 0; i < testKey.length(); i++)
+      tolower(testKey[i]);
+    
+    if (testValue.compare(testKey) == 0)
+    {
+        current->data += 1;
+    }  
+    else if(testValue < testKey)
+    {
+        if(current -> left == NULL)
+            current -> left = new Node(value, 1);
+    else
+      importInsertHelper(current -> left, value);
+    }
+
+    else
+    {
+        if(current -> right == NULL)
+            current -> right = new Node(value, 1);
+        else
+            importInsertHelper(current -> right, value);
+    }
+}
