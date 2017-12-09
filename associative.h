@@ -82,9 +82,6 @@ class associative
         *     The value you want to delete.
         *
         */
-	
-	associative operator [] (associative &T, std::string value);
-
 
     private:
         Node *root;
