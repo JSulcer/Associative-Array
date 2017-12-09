@@ -79,9 +79,11 @@ class associative
         *
         * Inputs:
         *   value:
-        *     The value you want to delete..
+        *     The value you want to delete.
         *
         */
+	
+	associative operator [] (associative);
 
 
     private:
