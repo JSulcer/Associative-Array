@@ -2,6 +2,7 @@
 #define ASSOCIATIVE_H
 
 #include <iostream>
+#include <fstream>
 #include <string>
 #include "node.h"
 
