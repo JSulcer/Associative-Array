@@ -1,7 +1,7 @@
 // Authors: Jon Sulcer and Adam Chisolm
 // Date: 12/8/17
-// File: node.h
-// Description: The header file for a Node object.
+// File: node.cpp
+// Description: The implementation of a Node.
 
 #include "node.h"
 
