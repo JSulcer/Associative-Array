@@ -82,6 +82,17 @@ class associative
         *     The value you want to delete.
         *
         */
+	
+	void import(std::string fileName);
+        /*
+         * Description:
+         *   Imports all words from a file into a tree. The word makes the key of the node and the data is how many times that word has appeared.
+         *
+         * Inputs:
+         *   fileName:
+         *     The file you want to import from.
+         *
+         */
 
     private:
         Node *root;
@@ -92,6 +103,8 @@ class associative
         void maxHelper(Node* current);
         void saveHelper(Node *current, std::ofstream &saveFile);
         void findHelper(Node *current, std::string value);
+	void importInsert(std::string value);
+        void importInsertHelper(Node *current, std::string value);
 };
 
 #endif // ASSOCIATIVE_H
