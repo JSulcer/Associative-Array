@@ -173,22 +173,22 @@ void associative::saveHelper(Node *current, ofstream& saveFile)
     }
 }
 
-void associative::find(string key)
+void associative::find(string value)
 {
-    findHelper(root, key);
+    findHelper(root, value);
 }
 
-void associative::findHelper(Node *current, string key)
+void associative::findHelper(Node *current, string value)
 {
-    if(current -> key > key && current -> left != NULL)
+    if(current -> key > value && current -> left != NULL)
     {
-        findHelper(current -> left, key);
+        findHelper(current -> left, value);
     }
-    else if (current -> key < key && current -> right != NULL)
+    else if (current -> key < value && current -> right != NULL)
     {
-        findHelper(current -> right, key);
+        findHelper(current -> right, value);
     }
-    else if (key.compare(current->key) == 0)
+    else if (value.compare(current->key) == 0)
     {
         cout << current -> data << endl;
     }
