@@ -118,3 +118,78 @@ void associative::deleteHelper(Node *&current, string value)
 	  }
       }
 }
+
+void associative::min()
+{
+    minHelper(root);
+}
+
+void associative::minHelper(Node* current)
+{
+    if (current -> left != NULL)
+    {
+        minHelper(current -> left);
+    }
+    else
+    {
+        cout << "Min: " << current -> key << endl;
+    }
+}
+
+void associative::max()
+{
+    maxHelper(root);
+}
+
+void associative::maxHelper(Node* current)
+{
+    if (current -> right != NULL)
+    {
+        maxHelper(current -> right);
+    }
+    else
+    {
+        cout << "Max: " << current -> key << endl;
+    }
+}
+
+void associative::save_file(string fileName)
+{
+    ofstream saveFile;
+    saveFile.open(fileName.c_str());
+    
+    saveHelper(root, saveFile);
+    
+    saveFile.close();
+}
+
+void associative::saveHelper(Node *current, ofstream& saveFile)
+{
+    if(current != NULL)
+    {
+        saveHelper(current -> left, saveFile);
+        saveFile << current -> key << " " << current -> data << "\n";
+        saveHelper(current -> right, saveFile);
+    }
+}
+
+void associative::find(string key)
+{
+    findHelper(root, key);
+}
+
+void associative::findHelper(Node *current, string key)
+{
+    if(current -> key > key && current -> left != NULL)
+    {
+        findHelper(current -> left, key);
+    }
+    else if (current -> key < key && current -> right != NULL)
+    {
+        findHelper(current -> right, key);
+    }
+    else if (key.compare(current->key) == 0)
+    {
+        cout << current -> data << endl;
+    }
+}
