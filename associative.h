@@ -83,7 +83,7 @@ class associative
         *
         */
 	
-	associative operator [] (associative T);
+	associative operator [] (string value);
 
 
     private:
