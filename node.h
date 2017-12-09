@@ -1,7 +1,7 @@
 // Authors: Jon Sulcer and Adam Chisolm
 // Date: 12/8/17
 // File: node.h
-// Description: The implementation of a Node.
+// Description: The header file for a Node object.
 
 #ifndef NODE_H
 #define NODE_H
