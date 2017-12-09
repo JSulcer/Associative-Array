@@ -223,17 +223,9 @@ void associative::importInsertHelper(Node *current, string value)
     string testValue = value;
     string testKey = current -> key;
     for(unsigned int i = 0; i < value.length(); i++)
-    {
       tolower(testValue[i]);
-      if(testValue[i] < 'a' || testValue[i] > 'z')
-        testValue.erase(i);
-    }
     for(unsigned int i = 0; i < testKey.length(); i++)
-    {
       tolower(testKey[i]);
-      if(testKey[i] < 'a' || testKey[i] > 'z')
-      	testKey.erase(i);
-    }
     
     if (testValue.compare(testKey) == 0)
     {
