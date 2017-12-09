@@ -16,10 +16,10 @@ class associative
         *   Inserts new value into the associative array.
         *
         * Inputs:
-        *   key:
+        *   value:
         *     The key for the new data.
-        *   data:
-        *     The data to be inserted.f
+        *   num:
+        *     The data to be inserted.
         *
         */
 
@@ -88,6 +88,10 @@ class associative
         void insertHelper(Node *current, std::string value, int num);
         void printHelper(Node *current);
 	void deleteHelper(Node *&current, std::string value);
+	void minHelper(Node* current);
+        void maxHelper(Node* current);
+        void saveHelper(Node *current, std::ofstream &saveFile);
+        void findHelper(Node *current, std::string key);
 };
 
 #endif // ASSOCIATIVE_H
