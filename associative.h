@@ -1,3 +1,8 @@
+// Authors: Jon Sulcer and Adam Chisolm
+// Date: 12/8/17
+// File: associative.h
+// Description: The header file for the associative array.
+
 #ifndef ASSOCIATIVE_H
 #define ASSOCIATIVE_H
 
