@@ -83,7 +83,7 @@ class associative
         *
         */
 	
-	associative operator [] (string value);
+	associative operator [] (associative &T, std::string value);
 
 
     private:
