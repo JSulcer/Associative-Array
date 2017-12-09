@@ -13,7 +13,8 @@ Description:
   tree stores a key (string) and its corresponding data (int).
   
 How to Use:
-  Run the program, uses very basic testing method. No user input.
+  Run the program, uses very basic testing method. No user input (other than
+  typing in a file to save to).
 
 Known Bugs/Problems:
   Not enough time as of now for menu implementation or operator[] overloading,
