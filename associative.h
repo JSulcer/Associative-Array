@@ -23,13 +23,13 @@ class associative
         *
         */
 
-        void find(std::string key);
+        void find(std::string value);
         /*
         * Description:
         *   Finds and prints the value for the given key.
         *
         * Inputs:
-        *   key:
+        *   value:
         *     The key for the value you want to find.
         *
         */
@@ -71,13 +71,13 @@ class associative
         *
         */
 
-        void delete_index(std::string key);
+        void delete_index(std::string value);
         /*
         * Description:
         *   Removes the first instance of the value from the associative array.
         *
         * Inputs:
-        *   key:
+        *   value:
         *     The value you want to delete..
         *
         */
@@ -91,7 +91,7 @@ class associative
 	void minHelper(Node* current);
         void maxHelper(Node* current);
         void saveHelper(Node *current, std::ofstream &saveFile);
-        void findHelper(Node *current, std::string key);
+        void findHelper(Node *current, std::string value);
 };
 
 #endif // ASSOCIATIVE_H
