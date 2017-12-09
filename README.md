@@ -14,7 +14,7 @@ Description:
   
 How to Use:
   Run the program, uses very basic menu. User may choose to add a word,
-	delete a word, import from a file, export to a file, find a word,
+  delete a word, import from a file, export to a file, find a word,
 	find the min and max words used (some functionality problem explained),
 	and print the tree (not very neat). Finally, the user may exit.
 
@@ -27,7 +27,7 @@ Known Bugs/Problems:
 	numbers of words in print. We haven't had a lot of time to work on the menu, so it
 	is very basic (doesn't use command line, questioning instead).
 	
-	Things learned:
-		Recieved a lot of experience with GitHub, using it for the first time slowed us
-		down some trying to learn how to use it, but overall was worth it as it is more
-		useful than trying to constantly figure out what we have for code exactly.
+Things learned:
+  Recieved a lot of experience with GitHub, using it for the first time slowed us
+	down some trying to learn how to use it, but overall was worth it as it is more
+	useful than trying to constantly figure out what we have for code exactly.
